@@ -4,8 +4,8 @@ public class Student {
     private String name, id;
     private int [] score = new int[3];
 
-    public Student() {}
-    public Student( String stName, String stID, int stScore[]) {
+    Student() {}
+    Student( String stName, String stID, int stScore[]) {
         name = stName;
         id = stID;
         for(int i=0; i<3; i++)
@@ -24,7 +24,7 @@ public class Student {
         score = stSc;
     }
 
-    public String getName()  {
+    String getName()  {
         return name;
     }
     public String getID()  {
@@ -34,14 +34,14 @@ public class Student {
         return score;
     }
 
-    public double avScore() {
+    double avScore() {
         double s=0.0;
         for(int i=0; i<3; i++)
             s += score[i];
         return (s/3);
     }
 
-    public void printOut() {
+    void printOut() {
         System.out.println("\n  Student attributes: ");
         System.out.println("\t name : "+name+ "\n\t id : " + id);
         for(int i=0; i<3; i++)

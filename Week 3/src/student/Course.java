@@ -1,34 +1,33 @@
 package student;
 
-public class Course {
-    private String name, code;
+class Course {
+    private String name;
     private int numStudents = 0;
     Student[] list = new Student[10];
 
-    /** Creates a new instance of Course */
-    public Course() {}
-    public Course(String nm, String cd) {
-        name = nm;
-        code = cd;
+    Course() {}
+    Course(String nm, String cd) {
+        this.name = nm;
+        String code = cd;
     }
 
-    public void addStudent(Student st) {  //needs check first whether the list is full
+    void addStudent(Student st) {  //needs check first whether the list is full
         list[numStudents] = st;
         numStudents += 1;
     }
 
-    public double averageSc() {
+    double averageSc() {
         double sum=0.0;
         for(int i=0; i<numStudents; i++)
             sum += list[i].avScore();
         return(sum/numStudents);
     }
 
-    public int getNumStud() {
+    int getNumStud() {
         return numStudents;
     }
 
-    public String getName() {
+    String getName() {
         return name;
     }
 }

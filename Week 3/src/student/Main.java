@@ -26,7 +26,7 @@ public class Main {
         stud2.printOut();
         stud3.printOut();
 
-        for(int i=0; i < 3; i++) {
+        for(int i = 0; i < 3; i++) {
             sScore3[i]= (int)(Math.random()*100);
         }
 

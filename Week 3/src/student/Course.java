@@ -30,6 +30,4 @@ class Course {
     String getName() {
         return name;
     }
-
-
 }

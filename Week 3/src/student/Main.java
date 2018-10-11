@@ -12,13 +12,24 @@ public class Main {
         int[] sScore2 ={70, 50, 50};
         int[] sScore3 = new int[3];
 
+        for(int i = 0; i < 3; i++) {
+            sScore3[i]= (int)(Math.random()*100);
+        }
+
         Course cm = new Course("Computing", "CMP06");
         Course cs = new Course("Computer Science", "CS06");
         Course cys = new Course("Cyber Security", "CYS06");
         Course se = new Course("Software Engineering", "SE06");
 
-        double cmAverage = cm.averageSc();
         int cmNumbers = cm.getNumStud();
+        int csNumbers = cs.getNumStud();
+        int cysNumbers = cys.getNumStud();
+        int seNumbers = se.getNumStud();
+
+        double cmAverage = (cmNumbers == 0) ? 0 : cm.averageSc();
+        double csAverage = (csNumbers == 0) ? 0 : cs.averageSc();
+        double cysAverage = (cysNumbers == 0) ? 0 : cys.averageSc();
+        double seAverage = (seNumbers == 0) ? 0 : se.averageSc();
 
         Student[] students = new Student[] {
                 new Student(sName, sID, sScore2),
@@ -26,25 +37,35 @@ public class Main {
                 new Student("John Atanasoff", "9876ja", sScore3),
         };
 
-        for(Student stud: students) stud.printOut();
-        for(int i = 0; i < 3; i++) sScore3[i]= (int)(Math.random()*100);
-
-        cm.addStudent(students[0]);
+        //cm.addStudent(students[0]);  // Testing for Average of 0
         cs.addStudent(students[1]);
         cys.addStudent(students[2]);
         se.addStudent(students[0]);
 
-        System.out.println("\n course name: "+ cm.getName());
-        System.out.println("\t average = "+ cmAverage);
-        System.out.println("\t stud number = "+ cmNumbers);
+        for(Student stud: students) stud.printOut();
+
+        // Ugly Formatting
+        System.out.println("Course Name: " + cm.getName() +
+                "\n\t Average: " + cmAverage +
+                "\n\t Student Number: " + cmNumbers + "\n");
+
+        System.out.println("Course Name: " + cs.getName() +
+                "\n\t Average: " + cs.averageSc() +
+                "\n\t Student Number: " + cs.getNumStud() + "\n");
+
+        System.out.println("Course Name: " + cys.getName() +
+                "\n\t Average: " + cys.averageSc() +
+                "\n\t Student Number: " + cys.getNumStud() + "\n");
+
+        System.out.println("Course Name: " + se.getName() +
+                "\n\t Average: " + se.averageSc() +
+                "\n\t Student Number: " + se.getNumStud() + "\n");
 
         for(int i = 0; i < cmNumbers; i++) {
-            System.out.println("\t " + cm.list[i].getName());
-            System.out.println("\t " + cs.list[i].getName());
+            System.out.println(cm.list[i].getName() + "\t" +
+                    cs.list[i].getName() + "\t" +
+                    cys.list[i].getName() + "\t" +
+                    se.list[i].getName());
         }
-
-        System.out.println("\n course name: "+ cs.getName());
-        System.out.println("\t average =  = "+ cs.averageSc());
-        System.out.println("\t stud number = "+ cs.getNumStud());
     }
 }

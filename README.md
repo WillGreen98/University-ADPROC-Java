@@ -29,3 +29,14 @@ We may cover programming concepts that can be added to previous projects or that
     * Class and Use Case Diagrams
     * Object and Activity Diagrams
     * Component and Interaction Diagrams
+    
+## Week 4
+* I/O
+* Streams
+* Readers & Writers
+* Scanner
+
+## Week 5
+* Hierarchy
+* Inheritance
+* Superclasses & subclasses

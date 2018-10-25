@@ -7,7 +7,7 @@ public class Student {
     Student() {}
     Student(String stName, int stScore[]) {
         name = stName;
-        for (int i = 0; i < 3; i++)
+        for(int i = 0; i < 3; i++)
             score[i] = ((stScore[i] > 0) && (stScore[i] < 101)) ? stScore[i] : 0;
     }
 
@@ -31,8 +31,9 @@ public class Student {
         double s = 0.0;
         for (int i = 0; i < 3; i++)
             s += score[i];
-        return (s / 3.);
+        return(s / 3.);
     }
+
     void printOut() {
         System.out.println("\n Student attributes: ");
         System.out.println("\t name : " + name);

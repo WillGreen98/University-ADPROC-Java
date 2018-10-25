@@ -5,7 +5,7 @@ import java.util.*;
 public class Course {
     private String name, code;
     private int numStudents = 0;
-    ArrayList < Student > list = new ArrayList < > ();
+    ArrayList<Student> list = new ArrayList<>();
 
     Course() {}
     Course(String nm, String cd) {
@@ -16,6 +16,7 @@ public class Course {
     int getNumStud() {
         return numStudents;
     }
+
     String getName() {
         return name;
     }
@@ -32,7 +33,7 @@ public class Course {
     double averageSc() {
         Student work = new Student();
         double s = 0.0;
-        for (Student aList: list) {
+        for(Student aList: list) {
             work = aList;
             s += work.avScore();
         }
@@ -43,7 +44,7 @@ public class Course {
         double max = 0.0;
         int ind = 0;
         Student work = new Student();
-        for (int i = 0; i < list.size(); i++) {
+        for(int i = 0; i < list.size(); i++) {
             work = list.get(i);
             if (max < work.avScore()) {
                 max = work.avScore();

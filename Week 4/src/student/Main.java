@@ -10,7 +10,7 @@ public class Main {
         String sName, again;
         int num = 0;
         boolean answer = false;
-        int[] sMarks = new int[3];
+        int[] score_marks = new int[3];
 
         ArrayList<Student> stud = new ArrayList<Student>();
 
@@ -19,11 +19,11 @@ public class Main {
             sName = scanner.nextLine();
             System.out.println("Enter three marks separated with whitespace!");
 
-            for(int i = 0; i < sMarks.length; i++) sMarks[i] = scanner.nextInt();
+            for(int i = 0; i < score_marks.length; i++) score_marks[i] = scanner.nextInt();
 
             scanner.nextLine();
 
-            Student current = new Student(sName, sMarks);
+            Student current = new Student(sName, score_marks);
             stud.add(current);
             System.out.println("\n Another student (y/n)?");
             again = scanner.nextLine();

@@ -7,22 +7,22 @@ public class Student {
     private int[] score = new int[3];
 
     Student() {}
-    Student(String stName, String stID, int stScore[]) {
-        name = stName;
-        id = stID;
-        score = stScore;
+    Student(String name, String id, int student_score[]) {
+        this.name = name;
+        this.id = id;
+        score = student_score;
     }
 
-    public void setName(String n) {
-        name = n;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public void setID(String sID) {
-        id = sID;
+    public void setID(String id) {
+        this.id = id;
     }
 
-    public void setScore(int stSc[]) {
-        System.arraycopy(stSc, 0, score, 0, 3);
+    public void setScore(int student_score[]) {
+        System.arraycopy(student_score, 0, score, 0, 3);
     }
 
     String getName() {
@@ -39,7 +39,7 @@ public class Student {
 
     double avScore() {
         double total = Arrays.stream(score).asDoubleStream().sum();
-        return (total/score.length);
+        return (total / score.length);
     }
 
     void printOut() {

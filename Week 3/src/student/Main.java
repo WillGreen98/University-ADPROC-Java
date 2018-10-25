@@ -8,12 +8,12 @@ public class Main {
         String myString;
         String  sName = "Augusta Ada", sID = "0123aa";
 
-        int[] sScore1 ={40, 60, 50};
-        int[] sScore2 ={70, 50, 50};
-        int[] sScore3 = new int[3];
+        int[] score1 ={40, 60, 50};
+        int[] score2 ={70, 50, 50};
+        int[] student_score = new int[3];
 
         for(int i = 0; i < 3; i++) {
-            sScore3[i]= (int)(Math.random()*100);
+            student_score[i]= (int)(Math.random()*100);
         }
 
         Course cm = new Course("Computing", "CMP06");
@@ -32,9 +32,9 @@ public class Main {
         double seAverage = (seNumbers == 0) ? 0 : se.averageSc();
 
         Student[] students = new Student[] {
-                new Student(sName, sID, sScore2),
-                new Student("Charles Babbage", "1234cb", sScore1),
-                new Student("John Atanasoff", "9876ja", sScore3),
+                new Student(sName, sID, score2),
+                new Student("Charles Babbage", "1234cb", score1),
+                new Student("John Atanasoff", "9876ja", student_score),
         };
 
         //cm.addStudent(students[0]);  // Testing for Average of 0
@@ -42,7 +42,7 @@ public class Main {
         cys.addStudent(students[2]);
         se.addStudent(students[0]);
 
-        for(Student stud: students) stud.printOut();
+        for(Student student: students) student.printOut();
 
         // Ugly Formatting
         System.out.println("Course Name: " + cm.getName() +

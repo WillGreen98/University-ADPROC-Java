@@ -8,9 +8,9 @@ public class Course {
     ArrayList<Student> list = new ArrayList<>();
 
     Course() {}
-    Course(String nm, String cd) {
-        name = nm;
-        code = cd;
+    Course(String name, String code) {
+        this.name = name;
+        this.code = code;
     }
 
     int getNumStud() {
@@ -31,23 +31,23 @@ public class Course {
     }
 
     double averageSc() {
-        Student work = new Student();
-        double s = 0.0;
-        for(Student aList: list) {
-            work = aList;
-            s += work.avScore();
+        Student student = new Student();
+        double score = 0.0;
+        for(Student stud: list) {
+            student = stud;
+            score += student.avScore();
         }
-        return (s / list.size());
+        return (score / list.size());
     }
 
     int maxAverage() {
         double max = 0.0;
         int ind = 0;
-        Student work = new Student();
+        Student student = new Student();
         for(int i = 0; i < list.size(); i++) {
-            work = list.get(i);
-            if (max < work.avScore()) {
-                max = work.avScore();
+            student = list.get(i);
+            if (max < student.avScore()) {
+                max = student.avScore();
                 ind = i;
             }
         }

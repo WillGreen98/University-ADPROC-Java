@@ -7,32 +7,36 @@ public class Student {
     private int [] score = new int[3];   
 
     public Student() {}
-    Student(String stName, int stScore[]) {
-        name = stName;
-        for(int i=0; i<score.length; i++) score[i]= ((stScore[i]> 0) && (stScore[i]< 101)) ? stScore[i] : 0;
+    Student(String name, int student_score[]) {
+        this.name = name;
+        for(int i=0; i<score.length; i++) score[i]= ((student_score[i]> 0) && (student_score[i]< 101)) ? student_score[i] : 0;
     }
 
-    public String  getName()  {
+    public String getName()  {
         return name;
     }
+
     public int[] getScore() {
         return score;
     }
-    public void setName(String n) {
-        name = n;
+
+    public void setName(String name) {
+        this.name = name;
     }
-    public void setScore(int stSc[]) {
-       score = stSc;
+
+    public void setScore(int student_score[]) {
+       score = student_score;
     }
 
     double avScore() {
-        double s= Arrays.stream(score).asDoubleStream().sum();
-        return (s/3);
+        double score = Arrays.stream(this.score).asDoubleStream().sum();
+        return (score / 3);
     }
+
     void printOut() {
         System.out.println("\n Student data: ");
         System.out.println("\t name : "+ name);
-        for(int i=0; i< score.length; i++) System.out.print("\tscore ["+ i+"] = " + score[i]);
+        for(int i = 0; i < score.length; i++) System.out.print("\t score [" + i + "] = " + score[i]);
         System.out.println("\n\t average score = " + avScore());
     }    
 }

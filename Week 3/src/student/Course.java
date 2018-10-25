@@ -6,8 +6,8 @@ class Course {
     Student[] list = new Student[10];
 
     Course() {}
-    Course(String nm, String cd) {
-        this.name = nm;
+    Course(String name, String code) {
+        this.name = name;
     }
 
     void addStudent(Student st) {
@@ -16,11 +16,11 @@ class Course {
     }
 
     double averageSc() {
-        double sum = 0.0;
+        double score = 0.0;
         for(int i = 0; i < numStudents; i++) {
-            sum += list[i].avScore();
+            score += list[i].avScore();
         }
-        return (sum/numStudents);
+        return (score / numStudents);
     }
 
     int getNumStud() {

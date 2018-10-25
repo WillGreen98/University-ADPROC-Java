@@ -2,51 +2,51 @@ package student;
 
 public class Student {
     private String name, id;
-    private int [] score = new int[3];
+    private int[] score = new int[3];
 
     public Student() {}
-    public Student( String stName, String stID, int stScore[]) {
-        name = stName;
-        id = stID;
+    Student(String name, String id, int student_score[]) {
+        this.name = name;
+        this.id = id;
         for(int i=0; i<3; i++)
-            score[i]= ((stScore[i]> 0) && (stScore[i]< 101)) ? stScore[i] : 0;
+            score[i]= ((student_score[i]> 0) && (student_score[i]< 101)) ? student_score[i] : 0;
     }
 
-    public void setName(String n) {
-        name = n;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public void setID(String sID) {
-        id = sID;
+    public void setID(String id) {
+        this.id = id;
     }
 
-    public void setScore(int stSc[]) {
-        score = stSc;
+    public void setScore(int student_score[]) {
+        this.score = student_score;
     }
 
     public String getName()  {
         return name;
     }
+
     public String getID()  {
         return id;
     }
+
     public int[] getScore() {
         return score;
     }
 
-    public double avScore() {
-        double s=0.0;
-        for(int i=0; i<3; i++)
-            s += score[i];
-        return (s/3);
+    double avScore() {
+        double score = 0.0;
+        for(int i = 0; i < 3; i++) score += this.score[i];
+        return(score/3);
     }
 
-    public void printOut() {
-        System.out.println("\n  Student attributes: ");
-        System.out.println("\t name : "+name+ "\n\t id : " + id);
-        for(int i=0; i<3; i++)
-            System.out.print("\tscore ["+ i+"] = "+score[i]);
-        System.out.println("\n\t  average score  = "+avScore());
+    void printOut() {
+        System.out.println("\n Student attributes: ");
+        System.out.println("\t name : " + name + "\n\t id: " + id);
+        for(int i=0; i<3; i++) System.out.print("\t score [" +  i + "] = " + score[i]);
+        System.out.println("\n\t average score = " + avScore());
     }
 }
 

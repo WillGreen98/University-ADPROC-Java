@@ -8,26 +8,28 @@ public class Course {
     ArrayList<Student> list = new ArrayList<Student>();	
 
     public Course() {}
-    Course(String nm, String cd) {
-        name = nm;
-        String code = cd;
+    Course(String name, String code) {
+        this.name = name;
     }
 
-    protected int getNumStud() { return numStudents; }
-    protected String getName() {
+    int getNumStud() {
+        return numStudents;
+    }
+
+    String getName() {
         return name;
     }
 
-    protected void addStudent(Student st) {
-        list.add(st);
+    void addStudent(Student student) {
+        list.add(student);
         numStudents++;
     }
 
-    protected double averageSc() {
-        double s = 0.0;
+    double averageSc() {
+        double score = 0.0;
         for(int i = 0; i < numStudents; i++) {
-            s += list.get(i).avScore();
+            score += list.get(i).avScore();
         }
-        return (s / numStudents);
+        return (score / numStudents);
     }
 }

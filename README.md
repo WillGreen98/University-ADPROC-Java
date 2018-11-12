@@ -40,3 +40,14 @@ We may cover programming concepts that can be added to previous projects or that
 * Hierarchy
 * Inheritance
 * Superclasses & subclasses
+
+## Week 6
+* Inheritance (continued). 
+* Vector, ArrayList & LinkedList 
+* Classes
+
+## Week 7
+* GUI and AWT/Swing graphics API (Application Programming Interface)
+* Applets 
+* AWT/Swing components (Button, Label, Scrollbar, Textfield, TextArea)
+

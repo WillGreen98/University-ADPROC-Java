@@ -37,7 +37,7 @@ public class Output {
                 System.out.println("Please enter a number!\n" + nfe);
             }
 
-            switch (choice) {
+            switch(choice) {
                 case 1: side1 = input(br, "side1: ");
                     side2 = input (br, "side2: ");
                     side3 = input (br, "side3: ");

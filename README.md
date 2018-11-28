@@ -51,3 +51,19 @@ We may cover programming concepts that can be added to previous projects or that
 * Applets 
 * AWT/Swing components (Button, Label, Scrollbar, Textfield, TextArea)
 
+## Week 8
+* Objects
+  * Inheritance (continued)
+  * Abstract classes
+  * Overloading
+  * Overriding
+  * Polymorphism
+
+## Week 9
+* Event Driven Programming
+* Event Handling Interface
+* Compenent Class
+  * Checkbox
+  * CheckboxGroup
+  * List
+

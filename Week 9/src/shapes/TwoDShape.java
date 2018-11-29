@@ -1,4 +1,4 @@
-package gui_calculator.ab_classes;
+package shapes;
 
 public abstract class TwoDShape {
     double a, b, c;

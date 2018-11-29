@@ -1,8 +1,8 @@
-package gui_calculator.ab_classes;
+package shapes;
 
 public class Rectangle extends TwoDShape {
     Rectangle() {};
-    Rectangle(double width, double length) {
+    public Rectangle(double width, double length) {
         super(width, length);
     }
 

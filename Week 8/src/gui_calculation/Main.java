@@ -1,4 +1,4 @@
-package gui_calculator.gui;
+package gui_calculation;
 
 public class Main {
     public static void main(String[] args) {

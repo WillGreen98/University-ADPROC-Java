@@ -1,8 +1,8 @@
-package gui_calculator.ab_classes;
+package shapes;
 
 public class Triangle extends TwoDShape {
     public Triangle() {};
-    Triangle(double side1, double side2, double side3) {
+    public Triangle(double side1, double side2, double side3) {
         super(side1, side2, side3);
     }
 

@@ -1,4 +1,4 @@
-package gui_calculator.gui;
+package gui_calculation;
 
 class Calc_GUI extends javax.swing.JFrame {
     Calc_GUI() {

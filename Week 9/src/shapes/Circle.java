@@ -1,8 +1,8 @@
-package gui_calculator.ab_classes;
+package shapes;
 
 public class Circle extends TwoDShape {
     public Circle() {};
-    Circle(double radius) {
+    public Circle(double radius) {
         super(radius);
     }
 
